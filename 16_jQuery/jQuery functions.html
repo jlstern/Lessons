@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text and HTML in jQuery</title>
+</head>
+<body>
+
+	<h1>jQuery Methods Demo Page</h1>
+	<input type="text" placeholder="your name">
+	<ul>
+		<li>Skittles</li>
+		<li>Starburst</li>
+		<li>Twix</li>
+	</ul>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+
+//  .text() retrieves or replaces text
+	$("h1").text();
+	// "jQuery Methods Demo Page"
+	$("li").text();
+	// SkittlesStarbustTwix
+	$("h1").text("New text");
+	// Sets "New text" for all h1s
+
+//.html() retrieves or replacesinner HTML
+	$("ul").html();
+
+// .attr() short for attribute
+	$("img").attr();
+	// can be used to change image source or other attribute
+	// can be used to change an input type
+
+	
+// .last() selects the last element in a series
+	$("p").last().attr();
+
+// .val() returns value of selected element
+	$("input").val();
+	// will return empty string if input is empty
+	// $("input").val("text here") will insert the string into the input field
+// .addClass() .removeClass() .toggleClass()
+	// pretty self-explantory
+	
+
+
+
+
+
+	</script>
+</body>
+</html>
