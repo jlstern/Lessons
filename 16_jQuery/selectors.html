@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>jQuery Demo</h1>
+<ul>
+	<li>Newt</li>
+	<li>Howler Monkey</li>
+	<li>Pine Martin</li>
+</ul>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	// $("") works like querySelectorAll
+	// will return a list even if there's only one item
+
+	$("h1").css("color", "yellow");
+	// style can be defined in an object too
+
+	var style = {
+		color: "red",
+		background: "pink",
+		border: "2px solid purple"
+	}
+
+	$("h1").css(style);
+
+	// OR
+
+	$("h1").css({
+		color: "red",
+		background: "pink",
+		border: "2px solid purple"
+	});
+
+
+</script>
+</body>
+</html>

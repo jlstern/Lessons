@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List Demo</title>
+	<style type="text/css">
+		.done {
+			text-decoration: line-through;
+			opacity: 0.5;
+		}
+		.selected {
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<h1>To Do List</h1>
+	<ul>
+		<li>Wash Cat</li>
+		<li>Feed Cat</li>
+		<li>Feed Dog</li>
+	</ul>
+	<script type="text/javascript">
+		var bullets = document.querySelectorAll("li");
+		for (i =0; 0 < bullets.length; i++) {
+			bullets[i].addEventListener("mouseover", function() {
+				this.classList.add("selected")
+			});
+			bullets[i].addEventListener("mouseout", function() {
+				this.classList.remove("selected")
+			});
+			bullets[i].addEventListener("click", function() {
+				this.classList.toggle("done");
+			});
+		}
+	</script>
+</html>

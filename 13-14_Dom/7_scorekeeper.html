@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Score Keeper App</title>
+	<style type="text/css">
+		.green {
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<h1><span class="scoreDisplay">0</span> to <span class="scoreDisplay">0</span></h1>
+	<p>Playing to <span id="maxscore">7</span></p>
+	<input type="number" name="Maximum score" min="1">
+	<button class="scoreButton">Player One</button>
+	<button class="scoreButton">Player Two</button>
+	<button id="reset">Reset</button>
+	<script type="text/javascript">
+		var	scoreDisplays	= document.querySelectorAll(".scoreDisplay");
+		var scoreButtons = document.querySelectorAll(".scoreButton");
+		var reset = document.getElementsByTagName("input");
+		var playerScore = [0, 0];
+		var maxScore = 7;
+		// Player 1 score
+		scoreButtons[0].addEventListener("click", function(){
+			if (playerScore[1] >= maxScore) {
+			} else if (playerScore[0] < maxScore) {
+				playerScore[0] += 1;
+				scoreDisplays[0].innerText = playerScore[0];
+			}
+			if (playerScore[0] >= maxScore) {
+				scoreDisplays[0].classList.add("green");
+			}
+		});
+		// Player 2 score
+		scoreButtons[1].addEventListener("click", function(){
+			if (playerScore[0] >= maxScore) {
+			} else if (playerScore[1] < maxScore) {
+				playerScore[1] += 1;
+				scoreDisplays[1].innerText = playerScore[1];
+			}
+			if (playerScore[1] >= maxScore) {
+				scoreDisplays[1].classList.add("green");
+			}
+		});
+		// Change max score
+		reset[0].addEventListener("change", function(){
+			maxScore = this.valueAsNumber;
+			document.querySelector("#maxscore").innerText = maxScore;
+			for (i = 0; i < 2; i++) {
+				if (playerScore[i] >= maxScore) {
+					playerScore[i] = maxScore;
+					scoreDisplays[i].innerText = maxScore;
+					scoreDisplays[i].classList.add("green");
+				} else {
+					scoreDisplays[i].classList.remove("green");
+				}
+			}
+		});
+		// Reset funtionality
+		document.querySelector("#reset").addEventListener("click", function(){
+			location.reload();
+		});
+	</script>
+</body>
+</html>

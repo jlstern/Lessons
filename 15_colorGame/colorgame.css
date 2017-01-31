@@ -1,0 +1,53 @@
+h1{
+	margin: 0;
+}
+body {
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #232323;
+	margin: 0;
+}
+.square {
+	width: 30%;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 25px;
+}
+#header {
+	color: white;
+	background-color: lightblue;
+	text-align: center;
+	margin-top: 0;
+}
+#menu {
+	background-color: white;
+	color: lightblue;
+	font-weight: 900;
+	font-size: 120%;
+	margin-bottom: 1.66%
+}
+#menubox {
+	width: 66.67%;
+	max-width: 600px;
+	margin: auto;
+}
+.menuitem {
+	width: 150px;
+	margin-left: 50px;
+}
+#main {
+	width: 66.67%;
+	max-width: 600px;
+	margin: auto;
+}
+.hidden {
+	opacity: 0;
+	transition: all .5s ease-in-out;
+}
+.clearboth {
+	clear: both;
+}
+#displayTitle {
+	font-size: 150%;
+}
