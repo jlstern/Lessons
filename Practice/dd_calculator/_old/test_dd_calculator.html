@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Darkest Dungeon Calculator</title>
+	<link rel="stylesheet" type="text/css" href="ddstyles.css">
+	<script type="text/javascript" src="dd.js"></script>
+</head>
+<body>
+	<h1>Darkest Dungeon Character Calculator</h1>
+	
+	<div id="portrait_box">
+		<img id="portrait" src="https://hydra-media.cursecdn.com/darkestdungeon.gamepedia.com/4/49/Abomination1.png">
+	</div>
+	<div id="dropdown_box">
+		<select id="heroSelector">
+			<option value="0">-Select a Hero-</option>
+			<option value="1">Abomination</option>
+			<option value="2">Antiquarian</option>
+			<option value="3">Bounty Hunter</option>
+		</select>
+		<br>
+		<button onclick="func()">Go!</button>
+
+	</div>
+	<div id="attack_box">
+		<table>
+			<tr>
+				<td><img class="skill" src="https://hydra-media.cursecdn.com/darkestdungeon.gamepedia.com/4/4a/Transform.png?version=697ba9fe44c8040a5a306d090c75d506"></td>
+				<td> <img class="skill" src="https://hydra-media.cursecdn.com/darkestdungeon.gamepedia.com/0/00/Manacles.png?version=3d48c10ea59503871b18fc002e506f84"></td>
+				<td> <img class="skill" src="https://hydra-media.cursecdn.com/darkestdungeon.gamepedia.com/3/3f/Beast%27s_Bile.png?version=aae29b8a65605ebd5147f7ae0b6b0594"></td>
+				<td> <img class="skill" src="https://hydra-media.cursecdn.com/darkestdungeon.gamepedia.com/8/81/Absolution.png?version=af8b049410025c210da3183ad1802228"></td>
+				<td> <img class="skill" src="https://hydra-media.cursecdn.com/darkestdungeon.gamepedia.com/b/bd/Rake.png?version=2db6a04d2f147744d42e73eb4d931704"></td>
+				<td> <img class="skill" src="https://hydra-media.cursecdn.com/darkestdungeon.gamepedia.com/2/27/Rage.png?version=6640dbe1728589e021f51cfe8ab85fae"></td>
+				<td> <img class="skill" src="https://hydra-media.cursecdn.com/darkestdungeon.gamepedia.com/2/2e/Slam.png?version=83d3ef88bf23999d26acbabecddbcae5"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	<div id="stat_box">
+		<table>
+			<tr>
+				<td class="stat_cell">Max HP:</td>
+				<td class="data_cell">00</td>
+				<td class="stat_cell">Acc Mod:</td>
+				<td class="data_cell">00</td>
+			</tr>
+			<tr>
+				<td class="stat_cell">Dodge:</td>
+				<td class="data_cell">00</td>
+				<td class="stat_cell">Crit Mod:</td>
+				<td class="data_cell">00</td>
+			</tr>
+			<tr>
+				<td class="stat_cell">Prot:</td>
+				<td class="data_cell">00</td>
+				<td class="stat_cell">Dmg Range:</td>
+				<td class="data_cell">00</td>
+			</tr>
+			<tr>
+				<td class="stat_cell">Speed:</td>
+				<td class="data_cell">00</td>
+				<td class="stat_cell">Avg Dmg:</td>
+				<td class="data_cell">00</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div id="resistance_box">
+		<table>
+			<tr>
+				<td class="stat_cell">Stun:</td>
+				<td class="data_cell">00</td>
+				<td class="stat_cell">Move:</td>
+				<td class="data_cell">00</td>
+			</tr>
+			<tr>
+				<td class="stat_cell">Blight:</td>
+				<td class="data_cell">00</td>
+				<td class="stat_cell">Bleed:</td>
+				<td class="data_cell">00</td>
+			</tr>
+			<tr>
+				<td class="stat_cell">Disease:</td>
+				<td class="data_cell">00</td>
+				<td class="stat_cell">Debuff:</td>
+				<td class="data_cell">00</td>
+			</tr>
+			<tr>
+				<td class="stat_cell">Death Blow:</td>
+				<td class="data_cell">00</td>
+				<td class="stat_cell">Trap:</td>
+				<td class="data_cell">00</td>
+			</tr>
+			<tr>
+				<td class="stat_cell">Stress:</td>
+				<td class="data_cell">00</td>
+				<td class="stat_cell">Virtue:</td>
+				<td class="data_cell">00</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="otherinfo_box">
+	</div>
+
+
+
+</body>
+</html>

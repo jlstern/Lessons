@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FTL Mini-game</title>
+	<style type="text/css">
+		.gamesize {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 800px;
+			height: 600px;
+		}
+		#background {
+			background-color: black;
+			background-image: url("http://www.gunnars.com/wp-content/uploads/2014/08/Space.jpg");
+		}
+		#kestral {
+			position: fixed;
+			top: 440px;
+			width: 100px;
+		}
+		#hud {
+			position: fixed;
+			top: 600px;
+			left: 0;
+			width: 800px;
+			background-color: gray;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div id="background" class="gamesize"></div>
+		<div id="kestralframe" class="gamesize"><img id="kestral" src="280px-Cruiser_Hull_Kestrel_A_The_Kestrel.png"></div>
+		<canvas id="lasercanvas" class="gamesize" width="800" height="600"></canvas>
+	</div>
+	<div id="hud">
+		<p>Score: 0</p>
+	</div>
+	<script type="text/javascript">
+		// Set variables
+		var xKestral = 0;
+		var xLaser = xKestral + 60;
+		var yLaser = 455;
+		var kestral = document.querySelector("#kestral")
+		// Movement controls (37 = left, 38 = up, 39 = right, 40 = down)
+		window.addEventListener("keydown", function(e){
+			if(e.keyCode === 39){
+				if(xKestral < 700){
+					moveRight();
+				}
+			}
+			if(e.keyCode === 37){
+				if(xKestral > 0){
+					moveLeft();
+				}
+			}
+		})
+		function moveRight(){
+			xKestral += 100;
+			kestral.style.left = xKestral + "px";
+		}
+			function moveLeft(){
+			xKestral -= 100;
+			kestral.style.left = xKestral + "px";
+		}
+		// Draw lasers
+		function drawLasers(){
+			var canvas = document.querySelector("#lasercanvas");
+			var ctx = canvas.getContext("2d");
+			ctx.clearRect(0, 0, 800, 600);
+			ctx.beginPath();
+			ctx.arc(xLaser, yLaser, 4, 0, 2 * Math.PI);
+			ctx.fillStyle = "limegreen";
+			ctx.fill();
+			ctx.closePath();
+		}
+		// Fire lasers
+		function fireLasers(){
+			xLaser = xKestral + 60;
+		}
+		// Last little bit to kick it off
+		drawLasers();
+	</script>
+</body>
+</html>

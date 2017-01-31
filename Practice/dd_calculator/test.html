@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+	<h3 id="title">Test</h3>
+	<select class="posquirk">
+		<option>null</option>
+		<option>1</option>
+		<option selected>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select>
+	<select class="posquirk">
+		<option>null</option>
+		<option>1</option>
+		<option>2</option>
+		<option selected>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select>
+	<select class="posquirk">
+		<option>null</option>
+		<option selected>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select>
+	<select class="posquirk">
+		<option>null</option>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option selected>5</option>
+	</select>
+	<select class="posquirk">
+		<option>null</option>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option selected>4</option>
+		<option>5</option>
+	</select>
+	<script type="text/javascript">
+
+		function declarePQuirkVariables(){
+			var pQuirkMove = 0;
+			var pQuirkBleed = 0;
+			var pQuirkComment = ["", "", "", "", ""];
+		}
+		// Defines posquirk dropdowns, adds event listeners -- WORKS PERFECTLY!
+		// Dropdowns cannot = each other, unless they are = 0
+		var pQSelect = document.querySelectorAll(".posquirk");
+		for (i = 0; i < pQSelect.length; i++) {
+			pQSelect[i].addEventListener("change", function(){
+				var shouldBeOne = 0;
+				for (e = 0; e < pQSelect.length; e++) {
+					if (this.selectedIndex !== 0 && this.selectedIndex === pQSelect[e].selectedIndex) {
+						shouldBeOne += 1
+					}
+				}
+				if (shouldBeOne > 1) {
+					this.selectedIndex = 0;
+				} else {
+					calculatePQuirks();
+				}
+			});
+		}
+
+		function calculatePQuirks() {
+		// Clear all variables
+			declarePQuirkVariables();
+			// Look at each pQSelect
+			for (a = 0; a < pQuirk.length; a++) {
+				if (pQSelect[a].selectedIndex === 1) {pQuirkComment[a] = "-20% Armor Upgrade Cost"}
+				else if (pQSelect[a].selectedIndex === 2) {pQuirkComment[a] = "No stress penalty when walking backwards"}
+				else if (pQSelect[a].selectedIndex === 3) {pQuirkMove = 15} //+15 Move Resist
+				else if (pQSelect[a].selectedIndex === 4) {pQuirkComment[a] = "+15% Dmg and -15% Stress Dmg vs Beast"}
+				else if (pQSelect[a].selectedIndex === 5) {pQuirkComment[a] = "+10% Accuracy and +3 Crit Chance vs Beast"}
+				else if (pQSelect[a].selectedIndex === 6) {pQuirkBleed = 10}
+				else if (pQSelect[a].selectedIndex === 7) {pQuirkComment[a] = "When HP below 50%, +35 Critical Chance"}
+				else if (pQSelect[a].selectedIndex === 8) {pQuirkComment[a] = "No stress penalty when walking backwards"}
+
+
+				}
+			}
+		}
+		
+
+
+	</script>
+</body>
+</html>
+
+
+
+

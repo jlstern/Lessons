@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DD Test Calculator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+		#portrait {
+			display: none;
+		}
+		#dropdowntable select{
+			margin: 5px 5px 5px 5px;
+		}
+		.hide {
+			display: none;
+		}
+	</style>
+</head>
+<body class="container">
+	<h1>DD App</h1>
+	<p id="test">by bricks4bread</p>
+	<h2>
+		<span id="heroresolve"></span> <span id="heroclass"></span> 
+	</h2>
+	<div class="row">
+		<div id="portrait_box" class="col-lg-2 col-md-3 col-sm-4 col-xs-4">	
+			<img id="portrait" class="img-responsive" src="#">
+		</div> <!-- End of portrait box -->
+	<!-- DROPDOWN BOX -->
+		<div id="dropdown_box" class="col-lg-10 col-md-9 col-sm-8 col-xs-12">
+			<table id="dropdowntable">
+				<tr>
+					<td>Class:</td>
+					<td>				
+						<select id="heroselect">
+							<option>Abomination</option>
+							<option>Antiquarian</option>
+							<option>Arbalest</option>
+							<option>Bounty Hunter</option>
+							<option>Crusader</option>
+							<option>Grave Robber</option>
+							<option>Hellion</option>
+							<option>Highwayman</option>
+							<option>Houndmaster</option>
+							<option>Jester</option>
+							<option>Leper</option>
+							<option>Man-at-Arms</option>
+							<option>Occultist</option>
+							<option>Plague Doctor</option>
+							<option>Vestal</option>
+						</select>
+					</td>
+					<td>Resolve Level:</td>
+					<td>
+						<select id="resolveselect">
+						  	<option>0 - Seeker</option>
+							<option>1 - Apprentice</option>
+							<option>2 - Adventurer</option>
+							<option>3 - Veteran</option>
+							<option>4 - Master</option>
+							<option>5 - Champion</option>
+							<option>6 - Legendary</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Weapon:</td>
+					<td>
+						<select id="weaponselect">
+					  		<option class="lv1">Rank 1</option>
+							<option class="lv1 lv2">Rank 2</option>
+							<option class="lv1 lv2 lv3">Rank 3</option>
+							<option class="lv1 lv2 lv3 lv4">Rank 4</option>
+							<option class="lv1 lv2 lv3 lv4 lv5">Rank 5</option>
+						</select>
+					</td>
+					<td>Armor:</td>
+					<td>
+						<select id="armorselect">
+						  	<option class="lv1">Rank 1</option>
+							<option class="lv1 lv2">Rank 2</option>
+							<option class="lv1 lv2 lv3">Rank 3</option>
+							<option class="lv1 lv2 lv3 lv4">Rank 4</option>
+							<option class="lv1 lv2 lv3 lv4 lv5">Rank 5</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Attack Type:</td>
+					<td>
+						<form id="attacktype">
+							<input checked type="radio" name="attacktype" value="melee"> Melee							<input type="radio" name="attacktype" value="ranged"> Ranged
+						</form>
+					</td>
+					<td>First Round?</td>
+					<td>
+						<form id="firstround">
+							<input checked type="radio" name="first" value="true">Yes
+							<input type="radio" name="first" value="false">No
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>Torch:</td>
+					<td>
+						<input type="number" name="torchselect" max="100" min="0" value="100">
+					</td>
+<!-- 					<td>Enemy Type:</td>
+					<td>
+						<select id="enemyselect">
+							<option>Not specificed / Other</option>
+							<option>Human</option>
+							<option>Unholy</option>
+							<option>Beast</option>
+							<option>Eldritch</option>
+						</select>
+					</td> -->
+				</tr>
+				<tr>
+					<td>Dungeon:</td>
+					<td>
+						<select id="dungeonselect">
+							<option>Ruins</option>
+							<option>Weald</option>
+							<option>Warrens</option>
+							<option>Cove</option>
+							<option>Hamlet</option>
+							<option>Darkest Dungeon</option>
+						</select>
+					</td>
+					<td>Dungeon Difficulty:</td>
+					<td>
+						<select id="diffselect">
+							<option>Apprentice (Green)</option>
+							<option>Veteran (Yellow)</option>
+							<option>Champion (Red)</option>
+							<option>Darkest</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</div> <!-- End of dropdown box -->
+	<!--  -->
+		<div class="col-xs-3">
+			<h4>Trinkets</h4>
+			<select id="trinket0"></select><br>
+			<select id="trinket1"></select>
+		</div>
+		<div class="col-xs-3">
+			<h4>Positive Quirks</h4>
+			<select id="posquirk0"></select><br>
+			<select id="posquirk1"></select><br>
+			<select id="posquirk2"></select><br>
+			<select id="posquirk3"></select><br>
+			<select id="posquirk4"></select>
+		</div>
+		<div class="col-xs-3">
+			<h4>Negative Quirkss</h4>
+			<select id="negquirk0"></select><br>
+			<select id="negquirk1"></select><br>
+			<select id="negquirk2"></select><br>
+			<select id="negquirk3"></select><br>
+			<select id="negquirk4"></select>
+		</div>
+		<div class="col-xs-3">
+			<h4>Diseases</h4>
+			<select id="disease0"></select><br>
+			<select id="disease1"></select><br>
+			<select id="disease2"></select>
+		</div>
+	<!-- STAT BOX -->
+		<div id="stat_box" class="col-md-6 col-sm-6 col-xs-12">
+			<h4>Stats</h4>
+			<table class="table">
+				<tr>
+					<td class="stat_cell">Max HP:</td>
+					<td id="maxHP" class="data_cell">00</td>
+					<td class="stat_cell">Acc Mod:</td>
+					<td id="accMod" class="data_cell">00</td>
+				</tr>
+				<tr>
+					<td class="stat_cell">Dodge:</td>
+					<td id="dodge" class="data_cell">00</td>
+					<td class="stat_cell">Crit Mod:</td>
+					<td id="critMod" class="data_cell">00</td>
+				</tr>
+				<tr>
+					<td class="stat_cell">Prot:</td>
+					<td id="prot" class="data_cell">00</td>
+					<td class="stat_cell">Dmg Range:</td>
+					<td id="dmgRang" class="data_cell">00</td>
+				</tr>
+				<tr>
+					<td class="stat_cell">Speed:</td>
+					<td id="speed" class="data_cell">00</td>
+					<td class="stat_cell">Avg Dmg:</td>
+					<td id="dmgAvg" class="data_cell">00</td>
+				</tr>
+			</table>
+		</div> <!-- End of stat box -->
+<!-- RESISTANCE BOX -->
+		<div id="resistance_box" class="col-md-6 col-sm-6 col-xs-12">
+			<h4>Resistances</h4>
+			<table class="table">
+				<tr>
+					<td class="stat_cell">Stun:</td>
+					<td id="stun" class="data_cell">00</td>
+					<td class="stat_cell">Move:</td>
+					<td id="move" class="data_cell">00</td>
+				</tr>
+				<tr>
+					<td class="stat_cell">Blight:</td>
+					<td id="blight" class="data_cell">00</td>
+					<td class="stat_cell">Bleed:</td>
+					<td id="bleed" class="data_cell">00</td>
+				</tr>
+				<tr>
+					<td class="stat_cell">Disease:</td>
+					<td id="disease" class="data_cell">00</td>
+					<td class="stat_cell">Debuff:</td>
+					<td id="debuff" class="data_cell">00</td>
+				</tr>
+				<tr>
+					<td class="stat_cell">Death Blow:</td>
+					<td id="death" class="data_cell">00</td>
+					<td class="stat_cell">Trap:</td>
+					<td id="trap" class="data_cell">00</td>
+				</tr>
+			</table>
+		</div> <!-- End resistance box -->
+		<div class="col-xs-12">
+			<table class="table">
+				<tr>
+					<td class="stat_cell">Stress Mod:</td>
+					<td id="stress" class="data_cell">00</td>
+					<td class="stat_cell">Virtue Chance:</td>
+					<td id="virtue" class="data_cell">00</td>
+					<td class="stat_cell">Scouting Mod:</td>
+					<td id="scouting" class="data_cell">00</td>
+				</tr>
+			</table>
+		</div>
+	<!-- COMMENTS BOX -->
+		<div class="col-xs-12">
+			<h4>Additional Effects</h4>
+			<p>Comment 1</p>
+			<p>Comment 2</p>
+			<p>Comment 3</p>
+			<p>Comment 4</p>
+			<p>Comment 5</p>
+			<p>Comment 6</p>
+			<p>Comment 7</p>
+			<p>Comment 8</p>
+			<p>Comment 9</p>
+			<p>Comment 10</p>
+		</div>
+	<!-- SKILLS BOX -->
+		<div id="skills_box" class="col-xs-12">
+			<h4>Combat Skills</h4>
+		</div>  <!-- End of skills box -->
+	<!-- CAMPING BOX -->
+		<div id="camping_box" class="col-xs-12">
+			<h4>Camping Skills</h4>
+		</div> <!-- End of camping box -->
+	</div> <!-- End of row-->
+<!-- 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+	<script type="text/javascript" src="dd.js"></script>
+
+</body>
+</html>

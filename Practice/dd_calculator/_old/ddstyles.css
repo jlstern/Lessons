@@ -1,0 +1,51 @@
+body {
+	width: 1000px;
+	margin: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#portrait {
+	margin: 0;
+	height: 200px;
+	float: left;
+}
+#portrait_box {
+	float: left;
+	border: 1px solid black;
+}
+#dropdown_box {
+	float: left;
+	border: 1px solid black;
+	height: 200px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+select {
+	margin-top: 10px;
+}
+#attack_box {
+	float: left;
+	border: 1px solid black;
+}
+#stat_box {
+	float: left;
+	clear: left;
+	border: 1px solid black;
+}
+.stat_cell {
+	background-color: lightgray;
+	width: 85px;
+}
+.data_cell {
+	background-color: tomato;
+	width: 50px;
+	text-align: center;
+}
+#resistance_box {
+	border: 1px solid black;
+	float: left;
+	clear: left;
+}
+.skill {
+	width: 75px;
+}
