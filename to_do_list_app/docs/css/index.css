@@ -1,0 +1,33 @@
+body {
+	background: -webkit-linear-gradient(left, lightblue, lightgoldenrodyellow);
+	background: -moz-linear-gradient(right, lightblue, lightgoldenrodyellow);
+	background: linear-gradient(to right, lightblue, lightgoldenrodyellow);
+	font-family: arial;
+}
+#list-div {
+	max-width: 300px;
+	background-color: white;
+	margin: 75px auto 0 auto;
+}
+#header {
+	background-color: lightblue;
+	height: 30px;
+}
+#header *{
+	/*float: left;*/
+	/*background-color: lightblue;*/
+	color: white;
+	/*width: 50%;*/
+	height: 30px;
+	margin: 0 auto 0 auto;
+	padding: 0;
+}
+h1 {
+	font-size: 22px;
+}
+i	{
+	text-align: right;
+}
+#add-new-todo {
+	clear: both;
+}
