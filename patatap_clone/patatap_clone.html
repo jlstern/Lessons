@@ -5,12 +5,23 @@
 	<script type="text/javascript" src="js_plugins/paper-full.js"></script>
 	<link rel="stylesheet" type="text/css" href="patatap.css">
 	<script type="text/paperscript" canvas="myCanvas">
-		for(var y = 0; y < 1000; y += 100){
-			for(var x = 0; x < 1000; x += 100){
-				var circle = new Path.Circle(new Point(x, y), 10);
-				circle.fillColor = "purple";
-			}
-		}
+	var circle = new Path.Circle(new Point(100, 70), 50);
+	circle.fillColor = "red";
+	function onFrame(event){
+		circle.fillColor.hue += 1;
+		circle = ({radius -= 1});
+	}
+
+	// function onKeyDown(event){
+	// 	var maxPoint = new Point(view.size.width, view.size.height);
+	// 	var randomPoint = Point.random();
+	// 	var point = maxPoint * randomPoint;
+	// 	circle = new Path.Circle(point, 50).fillColor = "orange";
+
+	// }
+
+
+
 
 
 	</script>
