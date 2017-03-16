@@ -20,3 +20,5 @@ rm + file name --- delete a specific file
 rm -rf + name of directory --- removes entire directory and all children
 (rf stands for recursive force; rf is a flag for the rm command)
 (rm - rf / can delete all computer files - BE CAREFUL!!)
+
+node + "filename" --- runs a node.js  file from the command line
