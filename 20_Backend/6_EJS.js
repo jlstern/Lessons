@@ -22,3 +22,18 @@ app.listen(process.env.PORT, process.env.IP, function(){
 // <%= %> used to add HTML to the page
 // <% %> is just for raw javascript
 
+// To include css, add to express file:
+app.use(express.static("public"));
+
+// To remove need for .ejs at the end of file names in express file
+app.set("view engine", "ejs");
+
+// To include HTML biolerplate, use partials (mini-templates)
+// create "partials" directory inside of "views"
+// header.ejs and footer.ejs (or similar filenames)
+
+// e.g. <% include partials/header %>
+
+// <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+
+// Need body-parser to make forms ****
