@@ -1,0 +1,36 @@
+Before you run the 3 commands from the following video lecture, you'll first need to run:sudo apt-get install -y mongodb-org
+
+Intro to MongoDB
+MongoDB is a non-relational database
+	he most popular database with Express and Node
+
+./mongod -- starts mongo server (use in seperate terminl)
+mongo -- open mongo console
+show dbs -- shows all databases
+show collections -- shows all collections
+use [name of databse] -- switches current database
+db.[name of collection].insert() -- inserts data in the database
+
+e.g.
+db.dogs.insert({name: "Rusty", breed: "Mutt"})
+
+db.dogs.find() -- finds all results in "dogs collection"
+
+dn.dogs.find({name: "Rusty"}) -- finds all dogs with name "Rusty"
+
+To update values
+dv.dogs.update({name: "Lulu"}, {$set: {breed: "Poodle", isCute: true}})
+^ updates dogs named Lulu with the above characteristics
+
+To destroy values
+db.dogs.remove({breed: "Poodle"})
+^ removes all Poodles 
+
+If Mongo server crashes, from the command line, run:
+
+cd ~
+./mongod --repair
+
+If you're still having trouble then you may need to use:
+
+--repairpath <path>

@@ -1,0 +1,19 @@
+Databases - Used for persistent data
+	• A collection of information/data
+	• Has an interface (language to manipulate the data)
+
+SQL (relational) vs. NoSQL (non-relational)
+
+SQL...
+• Been around the longest
+• Follows a set pattern
+• Uses tables (tabular)
+• Very rigid
+• Flat
+
+NoSQL...
+• Looks like JavaScript
+• Not flat
+• Flexible structure
+• What will be used in this course
+• Not better or worse than SQL

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slugmuck</title>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+	<h1>Welcome to Slugmuck</h1>
+	<button id="ruin-page">Slugmuck</button>
+	<p></p>
+	<script type="text/javascript">
+		var buttonClicked = false;
+		var repeat = 1;
+		var string = "";
+		var countdown
+		var count = 1;
+		$("#ruin-page").on("click", function(){
+			if(buttonClicked === false){
+				buttonClicked = true;
+				countdown = setInterval(function(){
+					for(var i = 0; i < count; i++){
+						string += ("Slugmuck ");
+					}
+					$("p").text(string);
+					count += 1;
+					if(count === 300){
+						while(repeat === 1){
+							buttonClicked = false;
+						}
+					}
+				}, repeat);
+			} else if(buttonClicked === true){
+				$("h1").text("That's not going to save you");
+			}
+		});
+	</script>
+</body>
+</html>
