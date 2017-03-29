@@ -34,3 +34,4 @@ cd ~
 If you're still having trouble then you may need to use:
 
 --repairpath <path>
+
