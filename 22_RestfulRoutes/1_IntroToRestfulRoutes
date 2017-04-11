@@ -1,0 +1,27 @@
+Restful routes
+
+Name		URL				 Verb		Description
+==================================================
+INDEX		/dogs 		 GET			Display a list of all dogs
+NEW			/dog/new 	 GET			Displays form to make a new dog
+CREATE	/dogs			 POST			Add new dog to database
+SHOW		/dogs/:id  GET			Shows info about one dog
+
+
+
+db.collection.drop() 
+deletes all data in the databse
+
+Mongo automatically generates ids for the show page
+
+
+-------------------------------------------
+
+REST (Representational State Transfer) isn't a new tool or technology, it's a pattern for defining our routes
+
+CRUD - Create, Read, Update, and Destroy
+
+CREATE    
+READ      /allBlogs
+UPDATE    /updateBlog/:id
+DESTROY   /destroyBlog/:id
