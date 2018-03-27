@@ -1,0 +1,8 @@
+Associations:
+• One:one
+• One:many
+• Many:many
+
+Embedding Data
+User
+Post
